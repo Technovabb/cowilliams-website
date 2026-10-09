@@ -1,0 +1,99 @@
+        <div class="form-card">
+          <form id="quote-form" novalidate data-preview-form data-done="form-done">
+            <fieldset>
+              <legend>1 · What do you need?</legend>
+              <div class="svc">
+                <label><input type="radio" name="service" value="civil"><span><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Civil works</span></label>
+                <label><input type="radio" name="service" value="marine"><span><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Marine works</span></label>
+                <label><input type="radio" name="service" value="asphalt"><span><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Asphalt &amp; paving</span></label>
+                <label><input type="radio" name="service" value="quarry"><span><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Quarry materials</span></label>
+                <label><input type="radio" name="service" value="rental" checked><span><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Equipment rental</span></label>
+              </div>
+            </fieldset>
+
+            <!-- Job details: only the set for the chosen service is shown -->
+            <fieldset class="job" data-for="rental">
+              <legend>2 · Job details</legend>
+              <div class="fields">
+                <div class="field"><label for="r-machine">Machine</label>
+                  <select id="r-machine" name="machine">
+                    <option>Excavator — small</option><option>Excavator — large</option><option>Dump truck</option><option>Bulldozer</option><option>Skid steer</option><option>Backhoe</option><option>Roller</option><option>Truck</option><option>Compressor</option><option>Not sure — please advise</option>
+                  </select></div>
+                <div class="field"><label for="r-start">Start date</label><input id="r-start" name="start_date" type="date"></div>
+                <div class="field"><label for="r-length">How long?</label>
+                  <select id="r-length" name="duration"><option>1 day</option><option>2–3 days</option><option>1 week</option><option>2 weeks</option><option>1 month or more</option></select></div>
+                <div class="field"><label for="r-site">Site location</label><input id="r-site" name="site" placeholder="Parish or address" autocomplete="street-address"></div>
+              </div>
+            </fieldset>
+
+            <fieldset class="job" data-for="civil" hidden>
+              <legend>2 · Job details</legend>
+              <div class="fields">
+                <div class="field"><label for="c-type">Type of work</label>
+                  <select id="c-type" name="work_type"><option>Road construction or rehabilitation</option><option>Sub-division or infrastructure</option><option>Golf course or sports facility</option><option>Landfill, tunnel or HV cable trenching</option><option>Other earthworks</option></select></div>
+                <div class="field"><label for="c-start">Start date <small>(approx.)</small></label><input id="c-start" name="start_date" type="date"></div>
+                <div class="field full"><label for="c-site">Site location</label><input id="c-site" name="site" placeholder="Parish or address"></div>
+                <div class="field full"><label for="c-files">Plans or drawings <small>(optional)</small></label><input id="c-files" name="files" type="file" multiple></div>
+              </div>
+            </fieldset>
+
+            <fieldset class="job" data-for="marine" hidden>
+              <legend>2 · Job details</legend>
+              <div class="fields">
+                <div class="field"><label for="m-type">Type of work</label>
+                  <select id="m-type" name="work_type"><option>Marina or jetty</option><option>Breakwater</option><option>Coastal protection</option><option>Land reclamation</option><option>Other marine works</option></select></div>
+                <div class="field"><label for="m-start">Start date <small>(approx.)</small></label><input id="m-start" name="start_date" type="date"></div>
+                <div class="field full"><label for="m-site">Site location</label><input id="m-site" name="site" placeholder="Island, parish or address"></div>
+                <div class="field full"><label for="m-files">Plans or drawings <small>(optional)</small></label><input id="m-files" name="files" type="file" multiple></div>
+              </div>
+            </fieldset>
+
+            <fieldset class="job" data-for="asphalt" hidden>
+              <legend>2 · Job details</legend>
+              <div class="fields">
+                <div class="field"><label for="a-type">What needs paving?</label>
+                  <select id="a-type" name="work_type"><option>Driveway</option><option>Car park</option><option>Road resurfacing</option><option>Runway or apron</option><option>Slurry seal</option></select></div>
+                <div class="field"><label for="a-size">Approximate size <small>(optional)</small></label><input id="a-size" name="size" placeholder="e.g. 200 m² or 40 × 5 m"></div>
+                <div class="field"><label for="a-start">Start date <small>(approx.)</small></label><input id="a-start" name="start_date" type="date"></div>
+                <div class="field"><label for="a-site">Site location</label><input id="a-site" name="site" placeholder="Parish or address"></div>
+              </div>
+            </fieldset>
+
+            <fieldset class="job" data-for="quarry" hidden>
+              <legend>2 · Job details</legend>
+              <div class="fields">
+                <div class="field"><label for="q-material">Material</label>
+                  <select id="q-material" name="material"><option>¼" mix</option><option>½" stone</option><option>¾" stone</option><option>1" stone</option><option>2" down</option><option>4"–6" stone</option><option>Marl</option><option>Sand</option><option>Lime</option></select></div>
+                <div class="field"><label for="q-qty">Quantity</label><input id="q-qty" name="quantity" placeholder="e.g. 10 tonnes or 2 truckloads"></div>
+                <div class="field full"><span class="label" id="q-how">Delivery or collection?</span>
+                  <div class="radio-row" role="radiogroup" aria-labelledby="q-how">
+                    <label><input type="radio" name="delivery" value="delivery" checked> Deliver to site</label>
+                    <label><input type="radio" name="delivery" value="collect"> I'll collect</label>
+                  </div></div>
+                <div class="field"><label for="q-date">Date needed</label><input id="q-date" name="date_needed" type="date"></div>
+                <div class="field"><label for="q-site">Delivery location</label><input id="q-site" name="site" placeholder="Parish or address"></div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>3 · Your details</legend>
+              <div class="fields">
+                <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" data-required></div>
+                <div class="field"><label for="f-company">Company <small>(optional)</small></label><input id="f-company" name="company" autocomplete="organization"></div>
+                <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+                <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+                <div class="field full"><label for="f-notes">Anything else we should know?</label><textarea id="f-notes" name="notes"></textarea></div>
+              </div>
+            </fieldset>
+
+            <p class="form-error" id="form-error" role="alert" hidden></p>
+            <div class="form-foot">
+              <button class="btn btn-yellow" type="submit">Send quote request <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+              <small>Goes straight to the right team.</small>
+            </div>
+          </form>
+          <div class="form-done" id="form-done" tabindex="-1" hidden>
+            <h3>Thank you.</h3>
+            <p>This is a design preview, so nothing was sent. On the live website, your request goes straight to the right team and you'll hear back with pricing and availability.</p>
+          </div>
+        </div>

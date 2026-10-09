@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en-BB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{robots}}
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}">
+  <meta name="theme-color" content="#0b1f4b">
+  <link rel="icon" href="{{root}}assets/img/cow-emblem.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{root}}assets/css/site.css?v={{version}}">
+</head>
+<body class="{{bodyClass}}">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <!--include icons-->
+  {{previewBar}}
+
+  <div class="topbar">
+    <div class="wrap">
+      <ul>
+        <li><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg> Barbados · St. Lucia · Projects across the Caribbean</li>
+      </ul>
+      <ul>
+        <li><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg> <a href="tel:+12464363910">(246) 436-3910</a></li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg> <a href="mailto:rentals@cow.bb">rentals@cow.bb</a></li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg> <span class="ph">[OPENING HOURS]</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="{{root}}index.html" aria-label="C.O. Williams Construction Ltd., home">
+        <img src="{{root}}assets/img/cow-emblem.png" alt="" width="50" height="50">
+        <span>
+          <span class="brand-name">C.O. Williams</span>
+          <span class="brand-sub">Construction Ltd.</span>
+        </span>
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li class="has-sub{{active:services}}">
+            <button class="nav-top" type="button" aria-expanded="false" aria-controls="sub-services">Services <svg class="i caret" aria-hidden="true"><use href="#i-caret"/></svg></button>
+            <ul class="sub" id="sub-services">
+              <li><a href="{{root}}services.html">All services</a></li>
+              <li><a href="{{root}}civil.html">Civil</a></li>
+              <li><a href="{{root}}marine.html">Marine</a></li>
+              <li><a href="{{root}}asphalt.html">Asphalt</a></li>
+              <li><a href="{{root}}quarries.html">Quarries</a></li>
+              <li><a href="{{root}}equipment-rental.html">Equipment rental</a></li>
+            </ul>
+          </li>
+          <li class="{{active:rental}}"><a class="nav-top" href="{{root}}equipment-rental.html">Equipment rental</a></li>
+          <li class="{{active:projects}}"><a class="nav-top" href="{{root}}projects.html">Projects</a></li>
+          <li class="{{active:quarry}}"><a class="nav-top" href="{{root}}quarries.html">Quarry products</a></li>
+          <li class="has-sub{{active:about}}">
+            <button class="nav-top" type="button" aria-expanded="false" aria-controls="sub-about">About <svg class="i caret" aria-hidden="true"><use href="#i-caret"/></svg></button>
+            <ul class="sub" id="sub-about">
+              <li><a href="{{root}}about.html">About us</a></li>
+              <li><a href="{{root}}about.html#team">Our team</a></li>
+              <li><a href="{{root}}careers.html">Careers</a></li>
+              <li><a href="{{root}}news.html">News</a></li>
+            </ul>
+          </li>
+          <li class="{{active:contact}}"><a class="nav-top" href="{{root}}contact.html">Contact</a></li>
+        </ul>
+        <a class="btn btn-yellow nav-quote" href="{{root}}contact.html#quote">Request a quote</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-yellow header-quote" href="{{root}}contact.html#quote">Request a quote</a>
+        <a class="icon-btn solid" href="tel:+12464363910" aria-label="Call (246) 436-3910"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg></a>
+        <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Menu"><svg class="i" aria-hidden="true"><use href="#i-menu"/></svg></button>
+      </div>
+    </div>
+    <div class="stripe" aria-hidden="true"></div>
+  </header>
+
+  <main id="main">
+{{content}}
+  </main>
+
+  <footer class="site-footer on-dark">
+    <div class="stripe" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="{{root}}index.html" aria-label="C.O. Williams Construction Ltd., home">
+            <img src="{{root}}assets/img/cow-emblem.png" alt="" width="50" height="50">
+            <span><span class="brand-name">C.O. Williams</span><span class="brand-sub">Construction Ltd.</span></span>
+          </a>
+          <p class="footer-tag">Moving the earth to please — across Barbados, St. Lucia and the Caribbean for over 50 years.</p>
+        </div>
+        <div>
+          <h2>Services</h2>
+          <ul><li><a href="{{root}}civil.html">Civil</a></li><li><a href="{{root}}marine.html">Marine</a></li><li><a href="{{root}}asphalt.html">Asphalt</a></li><li><a href="{{root}}quarries.html">Quarries</a></li><li><a href="{{root}}equipment-rental.html">Equipment rental</a></li></ul>
+        </div>
+        <div>
+          <h2>Company</h2>
+          <ul><li><a href="{{root}}about.html">About us</a></li><li><a href="{{root}}projects.html">Projects</a></li><li><a href="{{root}}careers.html">Careers</a></li><li><a href="{{root}}news.html">News</a></li><li><a href="{{root}}contact.html#quote">Request a quote</a></li></ul>
+        </div>
+        <div>
+          <h2>Barbados</h2>
+          <ul><li>Lears, St. Michael</li><li>P.O. Box 871E</li><li><a href="tel:+12464363910">(246) 436-3910</a></li><li><a href="mailto:rentals@cow.bb">rentals@cow.bb</a></li></ul>
+        </div>
+        <div>
+          <h2>St. Lucia</h2>
+          <ul><li><span class="ph">[ST. LUCIA ADDRESS]</span></li><li><span class="ph">[ST. LUCIA PHONE]</span></li></ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <span>© <span class="js-year">2026</span> C.O. Williams Construction Ltd. All rights reserved.</span>
+        <span>Website by Tech Nova Barbados</span>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="action-bar" aria-label="Quick actions">
+    <a class="call" href="tel:+12464363910"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg> Call</a>
+    <a class="wa soon" href="#whatsapp" data-soon="The WhatsApp button needs C.O. Williams' WhatsApp number."><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg> WhatsApp</a>
+    <a class="quote" href="{{root}}contact.html#quote">Get a quote</a>
+  </nav>
+
+  <div class="toast" id="toast" role="status" hidden></div>
+  <script src="{{root}}assets/js/site.js?v={{version}}"></script>
+</body>
+</html>
